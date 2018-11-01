@@ -1,0 +1,49 @@
+.heading {
+  padding-bottom: 5px !important;
+  border-bottom: 1px solid #aaaaaa;
+  font-size: 24px;
+  text-align: center;
+}
+.image {
+  border: 5px solid #ddd; /* Gray border */
+  border-radius: 20px; /* Rounded border */
+  padding: 5px; /* Some padding */
+  width: 250px; /* Set a small width */
+  position: relative;
+}
+.button {
+  border: none;
+  color: white;
+  padding: 12px 24px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius: 12px;
+}
+.googlebtn {
+  background-color: #f44336;
+}
+.facebookbtn {
+  background-color: #008cba;
+}
+@media screen and (min-width: 992px) {
+  .user-form {
+    border-left: 1px solid #dddddd;
+  }
+}
+.top-margin {
+  margin-top: 100px;
+}
+
+.oauth-links {
+  margin-top: 10px;
+}
+
+.btn {
+  border-radius: 0;
+}
