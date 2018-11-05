@@ -6,6 +6,11 @@ module.exports = {
       "",
     clientSecret: ""
   },
+  facebook: {
+    clientID:
+      "",
+    clientSecret: ""
+  },
   mongodb: {
     dbURI: ""
   },
