@@ -23,7 +23,7 @@ router.get(
 );
 
 //callback route for google to redirect
-router.get("/google/redirect", passport.authenticate("google"), (req, res) => {
+router.get("/google/redirect", passport.authenticate("google", { failureRedirect: '/' }), (req, res) => {
   //res.send(req.user);
   res.sendFile(path.resolve(__dirname, "../public", "home.html"));
 });
@@ -38,7 +38,7 @@ router.get(
 
 //callback route for facebook to redirect
 router.get('/facebook/redirect',
-  passport.authenticate('facebook', { failureRedirect: '/login' }),
+  passport.authenticate('facebook', { failureRedirect: '/' }),
   (req, res) => {
     // Successful authentication, redirect home.
     res.sendFile(path.resolve(__dirname, "../public", "home.html"));
