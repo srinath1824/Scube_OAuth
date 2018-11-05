@@ -61,9 +61,9 @@ passport.use(new FacebookStrategy({
       newUser.facebook.token = accessToken;
       newUser.facebook.email = profile.emails[0].value;
       newUser.save()
-        .then(newUser => {
-          console.log("new user was created" + newUser);
-          done(null, newUser);
+        .then(user => {
+          console.log("new user was created" + user);
+          done(null, user);
         });
     }
   });
