@@ -28,4 +28,20 @@ router.get("/google/redirect", passport.authenticate("google"), (req, res) => {
   res.sendFile(path.resolve(__dirname, "../public", "home.html"));
 });
 
+//auth with facebook
+router.get(
+  '/facebook',
+  passport.authenticate('facebook' , {
+    scope: ["email"]
+  })
+);
+
+//callback route for facebook to redirect
+router.get('/facebook/redirect',
+  passport.authenticate('facebook', { failureRedirect: '/login' }),
+  (req, res) => {
+    // Successful authentication, redirect home.
+    res.sendFile(path.resolve(__dirname, "../public", "home.html"));
+  });
+
 module.exports = router;
